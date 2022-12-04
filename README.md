@@ -4,9 +4,10 @@ This is a Hiring-Task
 
 Key Feature of this Application:
 
-FULLSTACK WEB APPLICATION USING LATEST TECHNOLOGIES JAVA-SpringBoot and Angular 15
-LAZY LOADING AT ANGULAR SIDE FOR SEAMLEASS PERFORMANCE
-PrimeNg Library for Angular UI Components
+FULLSTACK WEB APPLICATION USING LATEST TECHNOLOGIES, 
+JAVA-SpringBoot and Angular 15,
+LAZY LOADING AT ANGULAR SIDE FOR SEAMLEASS PERFORMANCE,
+PrimeNg Library for Angular UI Components,
 End-to-end Connectivity with a Server
 
 
@@ -15,7 +16,7 @@ Please follow the Steps as follows:
 Step 1: Take the Checkout of Code.
 
 Step 2: Open FrontEnd task folder and open command line, type below commands:
-        Make sure you have Node version > 16.0
+        Make sure you have Node version > 12.0
         npm install
         --Install PrimeNg Library--
         npm install primeng --save
