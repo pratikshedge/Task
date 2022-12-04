@@ -3,11 +3,11 @@ This is a Hiring-Task
 
 
 Key Feature of this Application:
- 
-   FULLSTACK WEB APPLICATION USING LATEST TECHNOLOGIES JAVA-SpringBoot and Angular 15
-   LAZY LOADING AT ANGULAR SIDE FOR SEAMLEASS PERFORMANCE
-   PrimeNg Library for Angular UI Components
-   End-to-end Connectivity with a Server
+
+FULLSTACK WEB APPLICATION USING LATEST TECHNOLOGIES JAVA-SpringBoot and Angular 15
+LAZY LOADING AT ANGULAR SIDE FOR SEAMLEASS PERFORMANCE
+PrimeNg Library for Angular UI Components
+End-to-end Connectivity with a Server
 
 
 Please follow the Steps as follows:
