@@ -1,0 +1,132 @@
+<p-toast></p-toast>
+
+<p-card class="centeredForm" header="Registration Form">
+<form [formGroup]="form" class="form" [class.form-invalid]="submitted">
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="username">
+      <span>
+        Username
+      </span>
+    </label>
+  </div>
+  <input type="text" pInputText name="username" formControlName="username"
+  placeholder="Enter your username" maxlength="30" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['username']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">username is required.</strong>
+  </div>
+</div>
+
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="password">
+      <span>
+        password
+      </span>
+    </label>
+  </div>
+  <input type="password" pInputText name="password" formControlName="password"
+  placeholder="Enter your password" maxlength="20" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['password']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">password is required.</strong>
+  </div>
+</div>
+
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="confirmpassword">
+      <span>
+        confirmpassword
+      </span>
+    </label>
+  </div>
+  <input type="password" pInputText name="confirmpassword" formControlName="confirmpassword"
+  placeholder="Enter your confirmpassword" maxlength="20" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['confirmpassword']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">confirmpassword is required.</strong>
+  </div>
+</div>
+
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="address">
+      <span>
+        address
+      </span>
+    </label>
+  </div>
+  <input type="text" pInputText name="address" formControlName="address"
+  placeholder="Enter your address" maxlength="30" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['address']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">address is required.</strong>
+  </div>
+</div>
+
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="mobile">
+      <span>
+        mobile
+      </span>
+    </label>
+  </div>
+  <input type="text" pInputText name="mobile" formControlName="mobile"
+  placeholder="Enter your mobile" maxlength="10" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['mobile']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">mobile is required.</strong>
+  </div>
+</div>
+
+<div class="p-field p-fluid p-mb-3">
+  <div class="csl-form-label">
+    <label for="email">
+      <span>
+        email
+      </span>
+    </label>
+  </div>
+  <input type="email" pInputText name="email" formControlName="email"
+  placeholder="Enter your email" maxlength="30" style="width:310px"
+  >
+  <div *ngIf="submitted && form.controls['email']?.invalid">
+    <i class="pi pi-exclamation-circle error-text"></i>&nbsp;
+    <strong class="validationDangerCustom">email is required.</strong>
+  </div>
+</div>
+<br>
+
+<p-button label="Register" type="submit"  (onClick)="onsubmit()"  ></p-button>
+<p-button
+        label="Back"
+        icon="pi pi-chevron-left"
+        styleClass="p-button-success"
+        (onClick)="goBack()"
+        [style]="{'margin-left': '.5em'}"
+      ></p-button>
+
+</form>
+
+</p-card>
+
+
+<!-- <p-card header="Registration" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+      <img alt="Card" src="assets/showcase/images/usercard.png">
+  </ng-template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+  <ng-template pTemplate="footer">
+      <p-button label="Save" icon="pi pi-check"></p-button>
+      <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+  </ng-template>
+</p-card> -->

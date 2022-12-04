@@ -1,0 +1,78 @@
+<p-card
+  header="Welcome"
+  [style]="{ width: '22.5rem'}"
+  styleClass="p-card-shadow centercard"
+>
+  <ng-template pTemplate="header"> </ng-template>
+  <p>{{WelcomeText}}</p>
+  <ng-template pTemplate="footer">
+    <p-button
+      label="Show Data"
+      icon="pi pi-chart-bar"
+      (onClick)="showData()"
+    ></p-button>
+    <p-button
+      label="Sign Up"
+      icon="pi pi-user-plus"
+      styleClass="p-button-success"
+      (onClick)="registerForm()"
+      [style]="{ 'margin-left': '.5em' }"
+    ></p-button>
+
+    <p-button
+      *ngIf="registerUserData.length >= 1"
+      label="Registered Users"
+      icon="pi pi-users"
+      styleClass="p-button-success"
+      (onClick)="showRegisterdUsers()"
+      [style]="{ 'margin-left': '.5em' }"
+    ></p-button>
+  </ng-template>
+</p-card>
+
+<p-dialog
+  [(visible)]="showRegData"
+  [maximizable]="true"
+  [style]="{ width: '90vw' }"
+  [modal]="true"
+>
+  <div class="grid">
+    <div class="col-12">
+      <p-card>
+        <p-table
+          #data
+          [value]="registerUserData"
+          [columns]="registerColumnGridList"
+          [rows]="10"
+          [paginator]="true"
+          [responsive]="true"
+        >
+          <ng-template pTemplate="header">
+            <tr>
+              <ng-container *ngFor="let col of registerColumnGridList">
+                <th>
+                  <span class="header-col width-col">
+                    {{ col.field }}
+                  </span>
+                </th>
+              </ng-container>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" Let-registerUserData let-i="rowIndex">
+            <tr
+              class="table-data-border"
+              [pSelectableRowDblClick]="registerUserData"
+            >
+              <td class="width-col">
+                <span>{{ registerUserData[i].email }}</span>
+              </td>
+              <td class="width-col">
+                <span>{{ registerUserData[i].userName }}</span>
+              </td>
+            </tr></ng-template
+          >
+        </p-table>
+      </p-card>
+    </div>
+  </div>
+</p-dialog>

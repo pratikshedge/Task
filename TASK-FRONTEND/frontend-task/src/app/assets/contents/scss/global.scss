@@ -1,0 +1,50 @@
+.master-heading
+{
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.justify
+{
+  justify-content: center;
+  width: 100%;
+}
+
+.validationDangerCustom
+{
+  font-weight: bold;
+  font-size: 14px;
+  color: #D6002A;
+}
+
+.form-invalid input.ng-invalid{
+  border: 1.35px solid #D6002A !important;
+}
+.error-text
+{
+  font-weight: bold;
+  color: #D6002A;
+}
+
+.centered{
+  position:fixed;
+  width:100px;
+  height:100px;
+  left:50%;
+  top:40%;
+  margin-left:-50px;
+  margin-top:-50px;
+}
+
+.p-card .p-card-body {
+  background: aliceblue !important;
+}
+
+.centercard
+{
+  position: fixed;
+  text-align: center;
+  top: 30%;
+  left: 40%;
+}

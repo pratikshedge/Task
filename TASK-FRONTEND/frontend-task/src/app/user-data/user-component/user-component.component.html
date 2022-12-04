@@ -1,0 +1,165 @@
+  <p-card header="{{pageTitle}}" styleClass="clearfix" [style]="{ width: '100%' }">
+    <div class="formgrid grid col-12">
+      <div class="col-3 fluid">
+        <div>
+          <label for="Product">
+            <span> Product </span>
+          </label>
+        </div>
+        <div>
+          <input
+            class="inputtext"
+            pInputText
+            [(ngModel)]="productname"
+            type="text"
+            [style]="{ width: '100%' }"
+            aria-label="product"
+            [readOnly]="true"
+          />
+        </div>
+      </div>
+
+      <div class="col-3 fluid">
+        <div>
+          <label for="init">
+            <span> Init </span>
+          </label>
+        </div>
+        <div>
+          <input
+            class="inputtext"
+            pInputText
+            [(ngModel)]="init"
+            type="text"
+            [style]="{ width: '100%' }"
+            aria-label="init"
+            [readOnly]="true"
+          />
+        </div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="grid">
+      <button class="mr-4" pButton type="submit" (click)="proceed()">
+        <span>Proceed</span>
+      </button>
+
+      <p-button
+        label="Back"
+        icon="pi pi-chevron-left"
+        styleClass="p-button-success"
+        (onClick)="goBack()"
+      ></p-button>
+    </div>
+  </p-card>
+  <br />
+  <p-dialog
+    [(visible)]="showData"
+    [maximizable]="true"
+    [style]="{ width: '90vw' }"
+    [modal]="true"
+  >
+    <div class="grid">
+      <div class="col-12">
+        <p-card>
+          <p-table
+            #data
+            [value]="forcastData"
+            [columns]="columns"
+            [rows]="10"
+            [paginator]="true"
+            [responsive]="true"
+            [resizableColumns]="true"
+            [customSort]="true"
+            [scrollable]="true"
+          >
+            <ng-template pTemplate="header">
+              <tr>
+                <ng-container *ngFor="let col of columns">
+                  <th>
+                    <span
+                      class="header-col width-col"
+                      [pSortableColumn]="col"
+                      pResizableColumn
+                    >
+                      {{ col }}
+                    </span>
+                    <p-sortIcon [field]="col"></p-sortIcon>
+                  </th>
+                </ng-container>
+              </tr>
+              <tr>
+                <!-- <th class="text-center fixed-td-sm"><span>&nbsp;</span></th> -->
+                <ng-container *ngFor="let col of columns">
+                  <th class="header-col">
+                    <span class="p-input-icon-left">
+                      <i class="pi pi-search" style="padding-left: 0.4rem"></i>
+                      <input
+                        class="inputtext"
+                        pInputText
+                        type="text"
+                        [style]="{ width: '100%' }"
+                        placeholder="Search"
+                        #fieldSearch
+                        (input)="
+                          data.filter(
+                            $any($event.target).value,
+                            col,
+                            'contains'
+                          )
+                        "
+                      />
+                    </span>
+                  </th>
+                </ng-container>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" Let-forcastData let-i="rowIndex">
+              <tr
+                class="table-data-border"
+                [pSelectableRowDblClick]="forcastData"
+              >
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].timepoint }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].cloudcover }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].seeing }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].transparency }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].lifted_index }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].rh2m }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <tr class="text-center">
+                    <span>
+                      direction : {{ forcastData[i].wind10m.direction }}</span
+                    >
+                  </tr>
+                  <p-divider></p-divider>
+                  <tr class="text-center">
+                    <span> speed : {{ forcastData[i].wind10m.speed }}</span>
+                  </tr>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].temp2m }}</span>
+                </td>
+                <td class="text-center width-col">
+                  <span>{{ forcastData[i].prec_type }}</span>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </p-card>
+      </div>
+    </div>
+  </p-dialog>
+
