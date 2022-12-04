@@ -15,7 +15,7 @@ Please follow below Steps:
 
 Step 1: Take the Checkout of Code.
 
- : Open FrontEnd task folder and open command line, type below commands:
+Step 2: Open FrontEnd task folder and open command line, type below commands:
         Make sure you have Node version > 12.0
         npm install
         --Install PrimeNg Library--
