@@ -15,7 +15,7 @@ Please follow below Steps:
 
 Step 1: Take the Checkout of Code.
 
-Step 2: Open FrontEnd task folder and open command line, type below commands:
+ : Open FrontEnd task folder and open command line, type below commands:
         Make sure you have Node version > 12.0
         npm install
         --Install PrimeNg Library--
@@ -31,18 +31,18 @@ Step 2: Open FrontEnd task folder and open command line, type below commands:
               "node_modules/primeicons/primeicons.css",
               "src/app/assets/contents/scss/global.scss"
             ],
-Step3 : Open your FrondEnd project in Visual Studio Code Using "code ." command.
-Step4 : UP your Frontend using npm start command.
+Step 3 : Open your FrondEnd project in Visual Studio Code Using "code ." command.
+Step 4 : UP your Frontend using npm start command.
      
      Now Your FrontEnd (Client) is UP and RUNNNG on http://localhost:4200/
      
-Step5: For BackEnd(Server) Side:
+Step 5: For BackEnd(Server) Side:
        Use System Build : Maven
        JDK 1.8
-Step6: Import Project in any Suitable IDE IntelliJ or Eclipse
-Step7: Open MySQL Workbench and create a schema named as "task" (you can change it using application.properties file)
-Step7: Go to main file (Where main Method is Written)
+Step 6: Import Project in any Suitable IDE IntelliJ or Eclipse
+Step 7: Open MySQL Workbench and create a schema named as "task" (you can change it using application.properties file)
+Step 8: Go to main file (Where main Method is Written)
        right click and run as JAVA Application.
-Step8: Now Your BackEnd (Server) is UP and RUNNNG on http://localhost:8888/
+Now Your BackEnd (Server) is UP and RUNNNG on http://localhost:8888/
 
 You can access your whole application on http://localhost:4200/ with client to server connectivity.
