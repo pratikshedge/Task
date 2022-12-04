@@ -11,7 +11,7 @@ PrimeNg Library for Angular UI Components,
 End-to-end Connectivity with a Server
 
 
-Please follow the Steps as follows:
+Please follow below Steps:
 
 Step 1: Take the Checkout of Code.
 
